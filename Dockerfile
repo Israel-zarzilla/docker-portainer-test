@@ -2,8 +2,7 @@ FROM node:19-alpine3.15 as dev
 WORKDIR /app
 COPY . ./
 RUN yarn install
-RUN yarn build
-CMD [ "yarn","start" ]
+CMD [ "yarn","start:dev" ]
 
 FROM node:19-alpine3.15 as dev-deps
 WORKDIR /app
