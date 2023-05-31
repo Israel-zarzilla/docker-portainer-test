@@ -2,7 +2,7 @@ FROM node:19-alpine3.15 as dev
 WORKDIR /app
 COPY package.json tsconfig.build.json tsconfig.json ./
 RUN yarn install
-CMD [ "yarn","start" ]
+CMD [ "yarn","start:dev" ]
 
 FROM node:19-alpine3.15 as dev-deps
 WORKDIR /app
